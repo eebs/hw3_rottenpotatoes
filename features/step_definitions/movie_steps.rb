@@ -33,3 +33,7 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
     end
   end
 end
+
+Then /^I should see all of the movies$/ do
+  Movie.all.count == all("table#movies tr").count
+end

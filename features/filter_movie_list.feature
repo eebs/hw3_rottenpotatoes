@@ -40,4 +40,8 @@ Scenario: no ratings selected
   # see assignment
 
 Scenario: all ratings selected
+  Given I am on the RottenPotatoes home page
+  When I check the following ratings: G, PG, PG-13, R, NC-17
+  And I press "ratings_submit"
+  Then I should see all of the movies
   # see assignment
